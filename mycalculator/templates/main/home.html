@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{% static 'main/home.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1>Calculator</h1>
+        <br />
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="btn-group mt-3" role="group">
+                <button type="submit" name="add" class="btn btn-primary">ADD</button>
+                <button type="submit" name="sub" class="btn btn-secondary">SUB</button>
+                <button type="submit" name="mul" class="btn btn-success">MUL</button>
+                <button type="submit" name="div" class="btn btn-danger">DIV</button>
+            </div>
+        </form>
+        <br />
+        <h3>Result : {{ result }}</h3>
+    </div>
+</body>
+</html>
