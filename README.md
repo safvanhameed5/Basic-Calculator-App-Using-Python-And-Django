@@ -21,5 +21,4 @@ The project is structured as follows:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/basic-calculator-app.git
-   cd basic-calculator-app
+   git clone https://github.com/safvanhameed5/Basic-Calculator-App-Using-Python-And-Django.git
